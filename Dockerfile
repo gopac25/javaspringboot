@@ -1,4 +1,4 @@
-FROM openjdk:8u131-jre
+FROM openjdk:8u242-jre
 
 MAINTAINER Gopala Krishnan
 
