@@ -29,7 +29,11 @@ spec:
     app: javaspringboot
 
   ports:
+  ports:
     - name: http
       port: 8080
+
+    - name: endpoint
+      port: 30020
 
   type: LoadBalancer
