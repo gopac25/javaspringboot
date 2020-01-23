@@ -51,6 +51,24 @@
 		   <groupId>org.springframework.boot</groupId>
 		   <artifactId>spring-boot-starter-data-mongodb</artifactId>
 		</dependency>
+		<!-- Test dependendencies -->
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>4.12</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.jboss.arquillian.junit</groupId>
+            <artifactId>arquillian-junit-container</artifactId>
+            <scope>test</scope>
+        </dependency>
+        <!-- Resolvers are needed in the Arquillian tests -->
+        <dependency>
+            <groupId>org.jboss.shrinkwrap.resolver</groupId>
+            <artifactId>shrinkwrap-resolver-impl-maven</artifactId>
+            <scope>test</scope>
+        </dependency>
 			
 	</dependencies>
 
