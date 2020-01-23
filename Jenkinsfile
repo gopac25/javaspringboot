@@ -2,13 +2,11 @@ pipeline {
    agent any
 
    environment {
-     // You must set the following environment variables
      ORGANIZATION_NAME = "gopac25"
      YOUR_DOCKERHUB_USERNAME = "gopac"
 
-     SERVICE_NAME = "position-tracker"
+     SERVICE_NAME = "javaspringboot"
      registry="${YOUR_DOCKERHUB_USERNAME}/${ORGANIZATION_NAME}-${SERVICE_NAME}:latest"
-     //registry = "gopac/gopac"
      registryCredential = 'dockerhub'
      dockerImage = ''
    }
@@ -22,14 +20,14 @@ pipeline {
       }
       stage('Build') {
          steps {
-            sh '''mvn clean package'''
+            sh "mvn clean package"
          }
       }
       stage('Code Analysis') {
          steps {
-           mvn sonar:sonar -Dsonar.projectKey="javaspringboot" \
+           sh "mvn sonar:sonar -Dsonar.projectKey=javaspringboot \
            -Dsonar.host.url="http://192.168.145.146:9000" \
-           -Dsonar.login="c428c0b436b92f1b9b629b5f597e60afead13a8a"
+           -Dsonar.login=c428c0b436b92f1b9b629b5f597e60afead13a8a"
          }
       }
       
