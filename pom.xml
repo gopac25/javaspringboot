@@ -94,10 +94,10 @@
 			</resource>		
 		</resources>	
 <distributionManagement>
-   <snapshotRepository>
-      <id>nexus</id>
-      <url>http://192.168.145.146:8081/nexus/content/repositories/javaspringboot</url>
-   </snapshotRepository>
+       <repository>
+      <id>nexus-releases</id>
+      <url>http://192.168.145.146:8081/repository/javaspringboot/</url>
+    </repository>
 </distributionManagement>
 	</build>
 
