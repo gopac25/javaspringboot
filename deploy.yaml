@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: javaspringboot
-        image: gopac/gopac25-javaspringboot:latest
+        image: gopac/gopac25-javaspringboot
         env:
         - name: SPRING_PROFILES_ACTIVE
           value: production-microservice
