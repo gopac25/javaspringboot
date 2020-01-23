@@ -25,23 +25,15 @@ pipeline {
       }
       stage('Code Analysis') {
          steps {
-           sh "mvn sonar:sonar -Dsonar.projectKey=javaspringboot \
-           -Dsonar.host.url="http://192.168.145.146:9000" \
-           -Dsonar.login=c428c0b436b92f1b9b629b5f597e60afead13a8a"
+           sh "mvn sonar:sonar"
          }
       }
       
             stage('Deploy to Nexus') {
          steps {
-            sh '''mvn deploy'''
+            sh "mvn deploy"
          }
       }
-      //stage('Build and Push Image') {
-        // steps {
-         // dockerImage = sh 'docker build -t ${REPOSITORY_TAG} .'
-          //  dockerImage = docker.build registry + ":${REPOSITORY_TAG}"
-     // }
-      //}
     stage('Building image') {
       steps{
         script {
@@ -58,11 +50,6 @@ pipeline {
         }
       }
     }
-      //stage('Deploy to Cluster') {
-        //  steps {
-          //          sh 'envsubst < ${WORKSPACE}/deploy.yaml | kubectl apply -f -'
-          //}
-      //}
       stage('Deploy to k8s'){
             steps{
                 sshagent(['kops-machine']) {
