@@ -1,20 +1,20 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: position-tracker
+  name: javaspringboot
 spec:
   selector:
     matchLabels:
-      app: position-tracker
+      app: javaspringboot
   replicas: 1
   template:
     metadata:
       labels:
-        app: position-tracker
+        app: javaspringboot
     spec:
       containers:
-      - name: position-tracker
-        image: gopac/gopac25-position-tracker:latest
+      - name: javaspringboot
+        image: gopac/gopac25-javaspringboot:latest
         env:
         - name: SPRING_PROFILES_ACTIVE
           value: production-microservice
@@ -22,11 +22,11 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name: javaspringboot-position-tracker
+  name: javaspringboot-service
 
 spec:
   selector:
-    app: position-tracker
+    app: javaspringboot
 
   ports:
     - name: http
