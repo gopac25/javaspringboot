@@ -93,13 +93,12 @@
 				</includes>
 			</resource>		
 		</resources>	
+	</build>
+
 <distributionManagement>
        <repository>
       <id>nexus-releases</id>
       <url>http://192.168.145.146:8081/repository/javaspringboot/</url>
     </repository>
 </distributionManagement>
-	</build>
-
-
 </project>
