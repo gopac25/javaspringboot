@@ -15,7 +15,7 @@
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
 		<version>1.4.0.RELEASE</version>
-		<relativePath/>
+		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 
 	<properties>
@@ -66,7 +66,10 @@
 				<groupId>io.fabric8</groupId>
 				<artifactId>docker-maven-plugin</artifactId>
 				<version>0.21.0</version>
-			</plugin>
+			</plugin>			
+			
+		</plugins>
+		
 		<resources>
 			<resource>
 				<filtering>true</filtering>
@@ -77,4 +80,6 @@
 			</resource>		
 		</resources>		
 	</build>
+
+
 </project>
