@@ -2,7 +2,7 @@ FROM openjdk:8u242-jre
 
 MAINTAINER Gopala Krishnan
 
-ADD target/javaspringboot-0.0.1-SNAPSHOT.jar javaspringboot.jar
+ADD target/javaspringboot-test.jar javaspringboot.jar
 
 EXPOSE 8080
 
