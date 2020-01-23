@@ -9,6 +9,13 @@
 
 	<name>javaspringboot</name>
 	<description>Demo project for Spring Boot</description>
+	
+	<parent>
+		<groupId>org.springframework.boot</groupId>
+		<artifactId>spring-boot-starter-parent</artifactId>
+		<version>1.4.0.RELEASE</version>
+		<relativePath/> <!-- lookup parent from repository -->
+	</parent>
 
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -90,7 +97,7 @@
 <distributionManagement>
        <repository>
       <id>nexus</id>
-      <url>http://192.168.145.146:8081/repository/javaspringboot/</url>
+      <url>http://192.168.145.146:8081/repository/</url>
     </repository>
 </distributionManagement>
 </project>
